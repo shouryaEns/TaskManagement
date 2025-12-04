@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  backend:
+    build: ./backend
+    container_name: task_backend
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGO_URI=mongodb+srv://shouryaens:PnqFH1epadHQWE3S@cluster0.8s14ahy.mongodb.net/ecommerce
+      - JWT_SECRET=supersecret
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:6
+    container_name: task_mongo
+    restart: always
+    ports:
+      - "27017:27017"
