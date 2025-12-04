@@ -14,7 +14,7 @@ const app = express();
 
 const allowedOrigins = [
   'http://localhost:3000',
-  'https://task-management-frontend.vercel.app',
+  'https://task-management-frontend.vercel.app/api',
 ];
 
 app.use(cors({
