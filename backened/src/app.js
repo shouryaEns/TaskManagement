@@ -12,8 +12,15 @@ const errorHandler = require('./middlewares/errorHandler');
 
 const app = express();
 
+const allowedOrigins = [
+  'http://localhost:3000',
+  'https://task-management-frontend.vercel.app',
+];
+
 app.use(cors({
-  origin: "*"
+  origin: allowedOrigins,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
 app.use(express.json());
