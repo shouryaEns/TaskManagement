@@ -12,15 +12,13 @@ const errorHandler = require('./middlewares/errorHandler');
 
 const app = express();
 
-const allowedOrigins = [
-  'http://localhost:3000',
-  'https://task-management-frontend.vercel.app/api',
-];
+// const allowedOrigins = [
+//   'http://localhost:3000',
+//   'https://task-management-frontend.vercel.app/api',
+// ];
 
 app.use(cors({
-  origin: allowedOrigins,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
+  origin: '*',
 }));
 
 app.use(express.json());
