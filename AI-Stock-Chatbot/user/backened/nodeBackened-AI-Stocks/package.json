@@ -1,0 +1,36 @@
+{
+  "name": "nodebackened-ai-stocks",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [
+    "nodejs",
+    "ai-agent",
+    "langchain",
+    "stocks",
+    "chatbot"
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@langchain/community": "^0.2.5",
+    "@langchain/google-genai": "^2.1.15",
+    "@langchain/openai": "^0.2.6",
+    "axios": "^1.13.4",
+    "cors": "^2.8.6",
+    "dotenv": "^16.4.5",
+    "express": "^5.2.1",
+    "ioredis": "^5.9.2",
+    "langchain": "^0.2.15",
+    "technicalindicators": "^3.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
