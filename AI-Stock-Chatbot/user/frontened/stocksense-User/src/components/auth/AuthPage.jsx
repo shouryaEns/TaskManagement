@@ -18,7 +18,7 @@ export default function AuthPage({ onLogin }) {
     e.preventDefault();
     setError(""); setLoading(true);
     try {
-      const res = await fetch("http://127.0.0.1:8000/auth/login", {
+      const res = await fetch("http://127.0.0.1:8000/user/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: loginForm.email, password: loginForm.password }),
@@ -44,7 +44,7 @@ export default function AuthPage({ onLogin }) {
     }
     setLoading(true);
     try {
-      const res = await fetch("http://127.0.0.1:8000/auth/register", {
+      const res = await fetch("http://127.0.0.1:8000/user/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
